@@ -5,7 +5,7 @@ const excelJS = require("exceljs");
 const replace = require('replace-in-file');
 
 const host = `http://localhost:3000`;
-const pathproject = `E:/monosus github/orientalmotor_2023/`
+const pathproject = `E:/monosus github/orientalmotor_2023/`;
 
 (async () => {
   console.time();
