@@ -115,7 +115,7 @@ const pathproject = `E:/monosus github/orientalmotor_2023/`;
     });
   });
   try {
-    const dataxlsx = await workbook.xlsx.writeFile(`${path}/OMG.xlsx`);
+    const dataxlsx = await workbook.xlsx.writeFile(`${path}/OM.xlsx`);
   } catch (err) {
     console.log("Error");
   }
