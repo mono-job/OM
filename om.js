@@ -45,7 +45,7 @@ const pathproject = `E:/monosus github/orientalmotor_2023/`;
             if (checkurl.old === path || checkurl.new === path)
               check = [
                 ...check,
-                { old: !path ? "Blank" : checkurl.id, new: checkurl.new, anchorlink },
+                { old: checkurl.id, new: checkurl.new, anchorlink },
               ];
           }
           return check;
@@ -61,7 +61,7 @@ const pathproject = `E:/monosus github/orientalmotor_2023/`;
         ...datacheck,
         {
           url,
-          path,
+          path: !path ? "Blank" : path,
           old: check?.old || "-",
           new: check?.new || "N/A",
           modal,
@@ -103,7 +103,7 @@ const pathproject = `E:/monosus github/orientalmotor_2023/`;
   worksheet.eachRow(function (row, rowNumber) {
     row.eachCell(function (cell, colNumber) {
       if (rowNumber !== 1){
-        if (cell.value != "-" && colNumber === 3)
+        if ((cell.value !== "-" && colNumber === 3) || (cell.value === "Blank" && colNumber === 2))
           row.getCell(colNumber).font = {
             color: { argb: "00FF0000" },
           };
